@@ -250,15 +250,15 @@ class JavadocRestCompiler(object):
 
             document.add_heading('Enum Constants')
             for enum_constant in enum_constants:
-                if self.member_headers:
-                    document.add_heading(enum_constant.name, '^')
+                #if self.member_headers:
+                #    document.add_heading(enum_constant.name, '^')
                 c = self.compile_enum_constant(name, enum_constant)
                 c.add_option('outertype', name)
                 document.add_object(c)
 
         fields = list(filter(self.filter, declaration.fields))
         if fields:
-            document.add_heading('Fields', '-')
+            document.add_heading('FieldsZ', '-')
             fields.sort(key=lambda f: f.declarators[0].name)
             for field in fields:
                 #if self.member_headers:
