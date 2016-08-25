@@ -279,8 +279,8 @@ class JavadocRestCompiler(object):
             document.add_heading('Methods', '-')
             methods.sort(key=lambda m: m.name)
             for method in methods:
-                if self.member_headers:
-                    document.add_heading(method.name, '^')
+                #if self.member_headers:
+                #    document.add_heading(method.name, '^')
                 m = self.compile_method(method)
                 m.add_option('outertype', name)
                 document.add_object(m)
