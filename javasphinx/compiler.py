@@ -258,7 +258,7 @@ class JavadocRestCompiler(object):
 
         fields = list(filter(self.filter, declaration.fields))
         if fields:
-            document.add_heading('FieldsZ', '-')
+            document.add_heading('Fields', '-')
             fields.sort(key=lambda f: f.declarators[0].name)
             for field in fields:
                 #if self.member_headers:
