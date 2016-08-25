@@ -261,8 +261,8 @@ class JavadocRestCompiler(object):
             document.add_heading('Fields', '-')
             fields.sort(key=lambda f: f.declarators[0].name)
             for field in fields:
-                if self.member_headers:
-                    document.add_heading(field.declarators[0].name, '^')
+                #if self.member_headers:
+                #    document.add_heading(field.declarators[0].name, '^')
                 f = self.compile_field(field)
                 f.add_option('outertype', name)
                 document.add_object(f)
@@ -272,8 +272,8 @@ class JavadocRestCompiler(object):
             document.add_heading('Constructors', '-')
             constructors.sort(key=lambda c: c.name)
             for constructor in constructors:
-                if self.member_headers:
-                    document.add_heading(constructor.name, '^')
+                #if self.member_headers:
+                #    document.add_heading(constructor.name, '^')
                 c = self.compile_constructor(constructor)
                 c.add_option('outertype', name)
                 document.add_object(c)
